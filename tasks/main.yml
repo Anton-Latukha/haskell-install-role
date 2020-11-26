@@ -1,2 +1,7 @@
 ---
-# tasks file for haskell-install-role
+- name: Pkg| `curl` installed
+  become: yes
+  package:
+    name: curl
+    state: present
+
