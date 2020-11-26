@@ -11,5 +11,4 @@
     GHCUP_USE_XDG_DIRS=Yes
     export GHCUP_USE_XDG_DIRS
     # Bail if command before pipe fails
-    set -o pipefail
-    curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
+    set -o pipefail && curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
