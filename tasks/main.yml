@@ -5,3 +5,9 @@
     name: curl
     state: present
 
+- name: Pkg| `ghcup` installed
+  # Installation respects XDG standard.
+  shell: |
+    GHCUP_USE_XDG_DIRS=Yes
+    export GHCUP_USE_XDG_DIRS
+    curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
