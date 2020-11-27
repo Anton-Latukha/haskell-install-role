@@ -5,12 +5,14 @@
     name: curl
     state: present
 
+# GCC is mandatory, as it is runtime dependency
 - name: Pkg| `gcc` installed
   become: yes
   package:
     name: gcc
     state: present
 
+# TODO: Make is a build-time dependency, if it was not installed before - purge it after the transaction
 - name: Pkg| `make` installed
   become: yes
   package:
