@@ -11,6 +11,12 @@
     name: gcc
     state: present
 
+- name: Pkg| `make` installed
+  become: yes
+  package:
+    name: gcc
+    state: present
+
 - name: Pkg| `ghcup` installed
   shell: |
     # Installation respects XDG standard.
