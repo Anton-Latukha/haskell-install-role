@@ -19,6 +19,11 @@
     name: gcc
     state: present
 
+- name: Fix| Creating a ~/.local/ghcup
+  file:
+    path: "{{ lookup('env', 'HOME') }}/.local/ghcup"
+    state: directory
+
 - name: Pkg| `ghcup` installed
   shell: |
     # Installation respects XDG standard.
