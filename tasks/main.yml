@@ -8,9 +8,9 @@
 - name: Pkg| `ghcup` installed
   shell: |
     # Installation respects XDG standard.
-    GHCUP_USE_XDG_DIRS=Yes
+    GHCUP_USE_XDG_DIRS=True
     export GHCUP_USE_XDG_DIRS
     # Bail if command before pipe fails
     set -o pipefail
-    export BOOTSTRAP_HASKELL_NONINTERACTIVE
+    export BOOTSTRAP_HASKELL_NONINTERACTIVE=True
     curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
