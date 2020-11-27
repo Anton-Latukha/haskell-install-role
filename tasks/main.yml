@@ -21,7 +21,7 @@
 
 - name: Fix| Creating a ~/.local/ghcup
   file:
-    path: "{{ lookup('env', 'HOME') }}/.local/ghcup"
+    path: "{{ lookup('env', 'HOME') }}/.local/share/ghcup"
     state: directory
 
 - name: Pkg| `ghcup` installed
