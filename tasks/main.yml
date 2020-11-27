@@ -5,6 +5,12 @@
     name: curl
     state: present
 
+- name: Pkg| `gcc` installed
+  become: yes
+  package:
+    name: gcc
+    state: present
+
 - name: Pkg| `ghcup` installed
   shell: |
     # Installation respects XDG standard.
